@@ -1,0 +1,5 @@
+New-Item -Path . -Name "data" -ItemType "Directory"
+Set-Location -Path ".\data"
+Invoke-WebRequest -Uri "https://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-100/coil-100.zip" -OutFile "coil-100.zip"
+Expand-Archive -Path "coil-100.zip" -DestinationPath "."
+Set-Location -Path ".."
